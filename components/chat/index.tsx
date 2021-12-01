@@ -1,11 +1,17 @@
 import { FC } from 'react'
 
+import MessagesContainer from '../message-container'
+import BUttonSendMessage from '../button-send-message'
 import Input from '../input'
-import { Container } from './chat.styles'
+import { Container, ChatInput } from './chat.styles'
 
 const Chat: FC = () => (
   <Container>
-    <Input placeholder="type a message" />
+    <MessagesContainer/>
+    <ChatInput>
+      <Input placeholder="type a message" />
+      <BUttonSendMessage title="Enviar" />
+    </ChatInput>
   </Container>
 )
 export default Chat
